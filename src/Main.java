@@ -31,15 +31,15 @@ public class Main {
 
         int[] wastes = generateRandomArray();
         int maxWastes = -1;
-        for (int i = 0; i < wastes.length; i++) {
-            if (wastes[i] > maxWastes) {
-                maxWastes = wastes[i];
+        for (int waste : wastes) {
+            if (waste > maxWastes) {
+                maxWastes = waste;
             }
         }
         int minWastes = 200000;
-        for (int i = 0; i < wastes.length; i++) {
-            if (wastes[i] < minWastes) {
-                minWastes = wastes[i];
+        for (int waste : wastes) {
+            if (waste < minWastes) {
+                minWastes = waste;
             }
         }
         System.out.println("Минимальная сумма трат за день составила " + minWastes + " рублей. Максимальная сумма" +
