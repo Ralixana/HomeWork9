@@ -31,13 +31,12 @@ public class Main {
 
         int[] wastes = generateRandomArray();
         int maxWastes = -1;
+        int minWastes = 200000;
+
         for (int waste : wastes) {
             if (waste > maxWastes) {
                 maxWastes = waste;
             }
-        }
-        int minWastes = 200000;
-        for (int waste : wastes) {
             if (waste < minWastes) {
                 minWastes = waste;
             }
@@ -52,11 +51,10 @@ public class Main {
         int[] wastes = generateRandomArray();
         double average = 0;
         for (int element : wastes) {
-            average += element / 30;
+            average += (double) element / wastes.length;
         }
         System.out.println("Средняя сумма трат за месяц составила " + average + " рублей");
     }
-
     public static void task4() {
         System.out.println("Task 4");
 
